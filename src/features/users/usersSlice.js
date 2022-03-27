@@ -8,7 +8,7 @@ function usersReducer(state = initialState, action) {
       console.log("adding ", action.payload);
       return {
         ...state,
-        users: [...state.users, action.payload],
+        users: [...state.users, action.payload]
       };
 
     default:

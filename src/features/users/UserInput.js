@@ -19,6 +19,7 @@ function UserInput() {
   function handleOnSubmit(event) {
     event.preventDefault();
     dispatch({ type: "users/add", payload: formData });
+    setFormData({ username: "", hometown: "" })
   }
 
   return (
@@ -27,6 +28,7 @@ function UserInput() {
         <input
           type="text"
           id="username"
+          value={formData.username}
           onChange={handleInputChange}
           placeholder="username"
         />
@@ -35,6 +37,7 @@ function UserInput() {
         <input
           type="text"
           id="hometown"
+          value={formData.hometown}
           onChange={handleInputChange}
           placeholder="hometown"
         />
